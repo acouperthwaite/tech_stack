@@ -10,7 +10,7 @@ import {CardSection } from './common';
 import * as actions from '../actions'; //import everything from index.js from actions folder
 
 class ListItem extends Component {
-  componentWillUpdate(){ //lifecycle methods are called automatically- no need to call it :) 
+  componentWillUpdate(){ //lifecycle methods are called automatically- no need to call it :)
     LayoutAnimation.spring();
   }
 
@@ -56,7 +56,7 @@ const styles = {
   }
 };
 
-const mapStateToProps = (state, ownProps) =>{
+const mapStateToProps = (state, ownProps) =>{  //interface from state object down to the component props level
 
   const expanded = state.selectedLibraryId === ownProps.library.item.id;
   return { expanded };
